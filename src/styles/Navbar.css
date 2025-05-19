@@ -1,0 +1,130 @@
+/* --- NavBar de base --- */
+.navbar {
+    background-color: #111;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  .logo {
+    color: #ffd700;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 20px;
+    flex: 1;
+  }
+  
+  .navbar-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar a {
+    color: #eee;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 10px;
+  }
+  
+  .navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #ffd700;
+  }
+  
+  .navbar a:hover::after {
+    width: 100%;
+  }
+  
+  /* --- Menu burger mobile uniquement --- */
+  .menu-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 22px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-right: 20px;
+      z-index: 1101;
+    }
+  
+    .menu-toggle .bar {
+      height: 3px;
+      width: 100%;
+      background-color: #ffd700;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+  
+    .menu-toggle.open .top {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .menu-toggle.open .middle {
+      opacity: 0;
+    }
+  
+    .menu-toggle.open .bottom {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  
+    /* Animation propre pour le menu burger */
+    .navbar-links {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background-color: rgba(17, 17, 17, 0.95);
+      backdrop-filter: blur(8px);
+      flex-direction: column;
+      gap: 25px;
+      padding: 40px 0;
+      display: none;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 1100;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+      transform: translateY(0);
+      opacity: 80%;
+      margin:3%
+    }
+  
+    .navbar-links a {
+      font-size: 1.3rem;
+    }
+  }
+  

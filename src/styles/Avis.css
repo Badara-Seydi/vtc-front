@@ -1,0 +1,83 @@
+.avis-container {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    min-height: 100vh;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+  
+  .avis-title {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .avis-note-moyenne {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 5px;
+  }
+  
+  .avis-source {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 40px;
+  }
+  
+  .avis-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .avis-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .avis-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .avis-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .avatar {
+    background-color: #ffd700;
+    color: #0d0d0d;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  
+  .ville {
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  
+  .etoiles {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #ffd700;
+  }
+  
+  .commentaire {
+    font-style: italic;
+    color: #ddd;
+  }
+  
