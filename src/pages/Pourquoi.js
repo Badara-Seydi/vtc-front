@@ -16,7 +16,7 @@ function Pourquoi() {
           <div className="avantage-card">
             <h3>🚗 Confort et Calme à Bord</h3>
             <p>
-              Notre gamme de véhicule hybrides et électriques vous offre un trajet silencieux, agréable, avec une finition soignée. Idéale pour vos déplacements pro ou privés.
+              Notre gamme de véhicule hybrides et électriques vous garantie des trajets silencieux, agréables, avec une finition soignée. Idéales pour vos déplacements pro ou privés.
             </p>
           </div>
           <div className="avantage-card">
